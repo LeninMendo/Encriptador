@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <!--Hojas de estilo cargadas-->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <!--Iconos cargados incluyendo version movil-->
+    <link rel="apple-touch-icon" href="./assets/alura.svg">
+    <link rel="shortcut icon" href="./assets/alura.svg" type="image/x-icon">
+    <!--Tipografia-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+
+    <!--Header-->
+    <header class="header">
+        <h1 class="titulo"><img src="./assets/alura.svg" alt="logo de Alura"> Encriptador de Texto</h1>
+    </header>
+
+    <!--Creando el Div de las notificaciones-->
+    <div class="notificacion" id="notificacion">
+        <span class="mensaje"></span>
+        <button class="cerrar" id="cerrar">X</button>
+        <progress></progress>
+    </div>
+
+    <!--Ventana modal para el historial de sesiones-->
+    <div class="modal" id="modalHistorial">
+        <div class="modal-dialog" id="listaSesiones">
+            <div class="titulo-historial">
+                <div>
+                    <p>Selecciona cualquier sesion que quieras para restablecerla</p>
+                    <button class="close-modal" data-close>Click para cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Bloquue principal para los cuadros de la textarea-->
+    <main>
+        <section class="contenedor_principal">
+            <article id="seccion_uno" class="seccion_uno">
+                <textarea id="textarea_uno" class="textarea" autocomplete="off" spellcheck="false"
+                    placeholder="Ingresa el texto que deseas encriptar aqui..." required autofocus></textarea>
+
+                <p class="warning"><img class="iconWarning" width="20" height="20"
+                        src="./assets/important-svgrepo-com (1).svg" alt="box-important--v1" />Solo letras
+                    minusculas y sin acento</p>
+
+                <section class="contenedor_botones">
+                    <button id="btn_encriptar" name="encriptar" class="boton">Encriptar
+                    </button>
+                    <button id="btn_desencriptar" name="desencriptar" class="boton">Desencriptar
+                    </button>
+                    <button id="btn_pegar" name="pegar" class="boton">Pegar
+                    </button>
+                    <button id="btn_limpiar" name="limpiar" class="boton">Limpiar
+                    </button>
+                    <button id="btn_historial" name="historial" class="boton">Historial
+                    </button>
+                    <button id="btn_guardar" name="guardar" class="boton">Guardar
+                    </button>
+                </section>
+            </article>
+            <article id="seccion_dos" class="seccion_dos">
+                <img src="./assets/crackmen.cda31d3.svg" alt="">
+                <p>Ningun mensaje fue encontrado</p>
+                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+            </article>
+            <article id="seccion_tres" class="seccion_tres">
+                <textarea id="textarea_dos" class="textarea" autocomplete="off" spellcheck="false" disabled
+                    readonly></textarea>
+                <button id="btn_copiar" name="copiar" class="boton_copiar">Copiar
+                </button>
+            </article>
+        </section>
+    </main>
+
+    <!--Area del footer-->
+    <footer class="footer">
+        <h5 class="autor"><a href="https://github.com/LeninMendo/Encriptador" class="link">
+                Repositorio disponible en Github <img src="./assets/github-mark.svg"></a></h5>
+        <p>Designed by Lenin Mendo | Alura by Oracle </p>
+    </footer>
+
+    <!--Scripts activos para el Encriptador-->
+    <script src="scripts/visibilidad.js"></script>
+    <script src="scripts/limpiar.js"></script>
+    <script src="scripts/copiar.js"></script>
+    <script src="scripts/pegar.js"></script>
+    <script src="scripts/encriptar.js"></script>
+    <script src="scripts/notificaciones.js"></script>
+    <script src="scripts/guardar.js"></script>
+    <script src="scripts/historial.js"></script>
+
+
+</body>
+
+</html>
